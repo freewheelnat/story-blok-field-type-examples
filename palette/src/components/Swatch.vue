@@ -71,7 +71,7 @@ export default {
             borderColor: contrastBorderColor(this.color),
           }}
           onClick={() =>
-            this.selected ? setValue(undefined) : setValue(color)
+            this.selected ? setValue(undefined) : setValue(colorName)
           }
         >
           {selected && <Checkmark class="plugin-swatch__checkmark" />}
