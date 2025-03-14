@@ -63,7 +63,7 @@ export default {
             color={color.colour}
             colorName={color.name}
             size={size}
-            selected={color === value}
+            selected={color.colour === value}
             setValue={setValue}
           />
         ))}
