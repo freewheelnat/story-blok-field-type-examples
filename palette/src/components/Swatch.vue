@@ -34,6 +34,10 @@ export default {
       type: String,
       required: true,
     },
+    colorName: {
+      type: String,
+      required: true,
+    },
     size: {
       type: String,
       default: 'medium',
@@ -52,7 +56,7 @@ export default {
     },
   },
   render() {
-    const { size, color, selected, setValue } = this
+    const { size, color, colorName, selected, setValue } = this
     return (
       <div
         class={`plugin-swatch plugin-swatch--${size} ${
@@ -72,6 +76,7 @@ export default {
         >
           {selected && <Checkmark class="plugin-swatch__checkmark" />}
         </div>
+        <div>{colorName}</div>
       </div>
     )
   },

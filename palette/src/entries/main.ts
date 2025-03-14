@@ -1,4 +1,4 @@
 import { loadPlugin } from '@/lib/loadPlugin'
 import PalettePlugin from '@/components/PalettePlugin.vue'
 
-loadPlugin('storyblok-palette', {}, PalettePlugin)
+loadPlugin('palette-with-colour-names', {}, PalettePlugin)

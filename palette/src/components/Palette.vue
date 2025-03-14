@@ -1,39 +1,29 @@
 <script>
 import Swatch from './Swatch'
 
+
+
 const defaultColors = [
-  '#00B3B0',
-  '#40C6C4',
-  '#7FD9D7',
-  '#D9F4F3',
-  '#1B243F',
-  '#545B6F',
-  '#8D919F',
-  '#C6C8CF',
-  '#B1B5BE',
-  '#DFE3E8',
-  '#E7EAEE',
-  '#EFF1F3',
-  '#2DB47D',
-  '#62C79E',
-  '#96D9BE',
-  '#CAECDE',
-  '#395ECE',
-  '#6B87DB',
-  '#9CAEE6',
-  '#CDD7F3',
-  '#FBCE41',
-  '#FCDB71',
-  '#FDE6A0',
-  '#FEF3CF',
-  '#FFAC00',
-  '#FFC140',
-  '#FFD57F',
-  '#FFEABF',
-  '#FF6159',
-  '#FF8983',
-  '#FFB0AC',
-  '#FFD7D5',
+  { colour: '#00B3B0', name: "name 1" },
+  { colour: '#40C6C4', name: "name 2" },
+  { colour: '#7FD9D7', name: "name 3" },
+  { colour: '#D9F4F3', name: "name 4"},
+  { colour: '#1B243F', name: "name 5" },
+  { colour: '#545B6F', name: "name 6" },
+  { colour: '#8D919F', name: "name 7" },
+  { colour: '#C6C8CF', name: "name 8" },
+  { colour: '#B1B5BE', name: "name 9" },
+  { colour: '#DFE3E8', name: "name 10" },
+  { colour: '#E7EAEE', name: "name 11" },
+  { colour: '#EFF1F3', name: "name 12" },
+  { colour: '#2DB47D', name: "name 13" },
+  { colour: '#62C79E', name: "name 14" },
+  { colour: '#96D9BE', name: "name 15" },
+  { colour: '#CAECDE', name: "name 16" },
+  { colour: '#395ECE', name: "name 17" },
+  { colour: '#6B87DB', name: "name 18" },
+  { colour: '#9CAEE6', name: "name 19" },
+  { colour: '#CDD7F3', name: "name 20" },
 ]
 
 export default {
@@ -70,7 +60,8 @@ export default {
       >
         {colors.map((color) => (
           <Swatch
-            color={color}
+            color={color.colour}
+            colorName={color.name}
             size={size}
             selected={color === value}
             setValue={setValue}

@@ -16,6 +16,7 @@ A custom field-type for Storyblok that allow users to select a color from a pale
 
 To add this field type to a Storyblok space, you need to
 
+0. Use version of Node that works with dependencies: `nvm i 16`
 1. Create a new field type in the Storyblok app.
 2. Open `src/entries/main.ts` and change the `pluginName` argument from `'storyblok-palette'` to the name of your
    plugin.
