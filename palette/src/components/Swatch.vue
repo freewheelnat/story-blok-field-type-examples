@@ -76,7 +76,8 @@ export default {
         >
           {selected && <Checkmark class="plugin-swatch__checkmark" />}
         </div>
-        <div>{colorName}</div>
+        <div class="colour_label"><span>{colorName}</span></div>
+       
       </div>
     )
   },
@@ -88,6 +89,9 @@ $small-size: 20px;
 
 .plugin-swatch {
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 
   &--small {
     border-radius: 5px;
@@ -106,6 +110,8 @@ $small-size: 20px;
     &.plugin-swatch--selected {
       border: 1px solid #00b3b0;
     }
+
+    
   }
 
   &--medium {
@@ -142,9 +148,23 @@ $small-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
 }
 
 .plugin-swatch__checkmark {
   height: $small-size;
+}
+  
+.colour_label {
+  color: #000;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  align-self: center;
+  font-family: Roboto, sans-serif;
 }
 </style>
