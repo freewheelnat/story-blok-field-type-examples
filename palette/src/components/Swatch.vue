@@ -38,6 +38,10 @@ export default {
       type: String,
       required: true,
     },
+    background: {
+      type: String,
+      required: true,
+    },
     size: {
       type: String,
       default: 'medium',
@@ -56,13 +60,17 @@ export default {
     },
   },
   render() {
-    const { size, color, colorName, selected, setValue } = this
+    const { size, color, colorName, background, selected, setValue } = this
     return (
       <div
         class={`plugin-swatch plugin-swatch--${size} ${
           selected ? 'plugin-swatch--selected' : ''
-        }`}
+          }`}
+        
       >
+        <div class="plugin-swatch__background" style={{
+          backgroundColor: background,
+        }}>
         <div
           class="plugin-swatch__button"
           style={{
@@ -75,6 +83,7 @@ export default {
           }
         >
           {selected && <Checkmark class="plugin-swatch__checkmark" />}
+          </div>
         </div>
         <div class="colour_label"><span>{colorName}</span></div>
        
@@ -148,7 +157,11 @@ $small-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.plugin-swatch__background {
   align-self: center;
+  padding: 4px;
 }
 
 .plugin-swatch__checkmark {

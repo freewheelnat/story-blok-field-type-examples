@@ -45,13 +45,17 @@ export default {
         return ['small', 'medium', 'large'].includes(value)
       },
     },
+    background: {
+      type: String,
+      default: '#00000000',
+    },
     colors: {
       type: Array,
       default: defaultColors,
     },
   },
   render() {
-    const { columns, colors, size, value, setValue } = this
+    const { columns, colors, background, size, value, setValue } = this
 
     return (
       <div
@@ -61,6 +65,7 @@ export default {
         {colors.map((color) => (
           <Swatch
             color={color.colour}
+            background={background}
             colorName={color.name}
             size={size}
             selected={color.name === value}

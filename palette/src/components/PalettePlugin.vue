@@ -33,6 +33,7 @@ export default {
         setValue={(value) => this.setValue({ value })}
         value={this.value?.value ?? defaultValue}
         size={this.options.size}
+        background={this.options.background}
         colors={colors}
       />
     )
