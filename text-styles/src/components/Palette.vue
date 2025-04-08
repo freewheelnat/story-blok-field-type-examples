@@ -26,14 +26,18 @@ export default {
         class="plugin-swatch-grid"
         style={`grid-template-columns: repeat(${columns}, 1fr)`}
       >
-        {textStyles.map((textStyle) => (
-          <Swatch
-            textStyleName={textStyle.name}
-            textStyleCategory={textStyle.category}
-            textStylePath={ textStyle.path}
-            selected={textStyle.name === value}
-            setValue={setValue}
-          />
+        {textStyles.map((textStyleCategory) => (
+          <div class = "plugin-swatch-category">
+            <div >{textStyleCategory.category}</div>
+            {textStyleCategory.styles.map((textStyle) => (
+              <Swatch
+                textStyleName={textStyle.name}
+                textStyleCategory={textStyle.category}
+                textStylePath={textStyle.path}
+                selected={textStyle.name === value}
+                setValue={setValue}
+              />))}
+          </div>
         ))}
       </div>
     )
@@ -45,7 +49,8 @@ export default {
 .plugin-swatch-grid {
   display: flex;
   flex-wrap: wrap;
-  //justify-items: start;
-  //width: auto;
+}
+.plugin-swatch-category {
+  padding-bottom: 20px;
 }
 </style>
